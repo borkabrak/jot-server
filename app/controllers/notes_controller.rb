@@ -10,6 +10,12 @@ class NotesController < ApplicationController
   def new
   end
 
+  def destroy
+    @note = Note.find(params[:id])
+    @note.destroy
+    redirect_to notes_path
+  end
+
   def show
     @note = Note.find(params[:id])
     respond_to do |format|

@@ -1,9 +1,20 @@
-<h1>List Notes</h1>
+<h1>Notes</h1>
 
 <%= link_to 'New Note', new_note_path %>
 
-<ul>
-<% @notes.each do |note| %>
-  <li><%= link_to note.id, note_path(note) %>: <%= note.body %> 
-<% end %>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Created</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @notes.each do |note| %>
+    <tr>
+      <td><%= link_to note.updated_at, note_path(note) %></td>
+      <td><%= note.body %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

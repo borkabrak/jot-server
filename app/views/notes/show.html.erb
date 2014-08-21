@@ -4,4 +4,5 @@
   Text: <%= @note.body %>
 </p>
 
+<%= link_to 'Delete this note', note_path, method: :delete, data: { confirm: "Are you sure?" } %><br>
 <%= link_to 'All Notes', notes_path %>
