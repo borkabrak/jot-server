@@ -1,0 +1,8 @@
+README
+======
+
+Backend web service for jot.
+
+TODO:
+
+  * handle errors (such as deleting a non-existent note, etc.)
