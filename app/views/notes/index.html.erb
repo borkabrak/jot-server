@@ -1,7 +1,9 @@
 <h1>List Notes</h1>
 
+<%= link_to 'New Note', new_note_path %>
+
 <ul>
 <% @notes.each do |note| %>
-  <li><%= note.id %>: <%= note.body %> 
+  <li><%= link_to note.id, note_path(note) %>: <%= note.body %> 
 <% end %>
 </ul>
