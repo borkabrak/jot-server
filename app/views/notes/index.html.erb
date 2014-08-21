@@ -1,0 +1,7 @@
+<h1>List Notes</h1>
+
+<ul>
+<% @notes.each do |note| %>
+  <li><%= note.id %>: <%= note.body %> 
+<% end %>
+</ul>
